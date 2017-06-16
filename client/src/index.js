@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {Router, Route, browserHistory} from 'react-router'
+import {Router, Route, browserHistory, IndexRoute} from 'react-router';
+
 require('bootstrap/dist/css/bootstrap.css');
 
 import App from './App';
