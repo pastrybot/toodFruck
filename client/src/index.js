@@ -4,7 +4,7 @@ import {Router, Route, browserHistory, IndexRoute} from 'react-router'
 require('bootstrap/dist/css/bootstrap.css');
 
 import App from './App';
-import {HomeContainer}
+import {HomeContainer} from './containers';
 //this is where we define the path.  You can name the path anything you want.
 
 ReactDOM.render(
