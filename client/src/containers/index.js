@@ -1,1 +1,1 @@
-export
+export {default as HomeContainer} from './HomeContainer/HomeContainer';
