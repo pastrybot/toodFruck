@@ -1,12 +1,13 @@
+
 ## Food Truck Locator with Google API
+
 
 This is a full-stack project, utilizing all of the tools and technologies learned while
 attending a full-stack web development bootcamp through Big Sky Code Academy.
 This project will contain:
- -*a home page*: a resume, portfolio and 'About Me'; -*blogging engine*: with a section for users to view blog posts, filter by category, and leave
- feedback via comments;
+ -*a home page*: a map with geolocation
  -*user authentication*: will be implemented as a means of
- securing who can create posts and leave comments.
+ allowing vendors access to an update page to update their location etc.
 ___________________________
 ###To Run:
 
@@ -37,19 +38,10 @@ Technologies
 Todo-Document all of your endpoints, how to utilize them, and the expected response for each endpoint.
 
 ####*Resources*
--Article
-  -title
-  -content
+
 
 ####*example*
-Article
-```
-{
-  title: 'My first blog post',
-  content: 'Lorem ipsum..
-  '
-}
-```
+
 ___________________________
 ###Front-end Overview
 ####*technologies*
@@ -59,9 +51,7 @@ ___________________________
 
 ####*Pages*
   -Home
-  -Articles
-    -view
-    -edit
+  -truck edit
   -Contact
 
   ***toDo: React Component Hierarchy Tree***
@@ -72,7 +62,7 @@ ___________________________
 ###Stage One
 1)Create functional Node/Express Application
 2)Implement CRUD restful API for article resource
-3)TDD: Implement at least 3 tests
+
 
 ___________________________
 
