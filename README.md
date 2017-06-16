@@ -1,4 +1,4 @@
-## My new blogging site
+## Food Truck Locator with Google API
 
 This is a full-stack project, utilizing all of the tools and technologies learned while
 attending a full-stack web development bootcamp through Big Sky Code Academy.
