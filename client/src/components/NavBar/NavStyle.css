@@ -1,0 +1,14 @@
+.header{
+  margin: 40px 0px;
+  text-overflow: clip;
+}
+
+.nav ul{
+  display: inline-block;
+  list-style: none;
+}
+
+.nav li{
+  text-decoration: none;
+  list-style: none;
+}
