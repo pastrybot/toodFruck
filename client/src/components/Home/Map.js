@@ -1,17 +1,32 @@
-import React, { Component } from 'react';
+import React, { PropTypes, Component } from 'react';
 import GoogleMapReact from 'google-map-react';
+//import shouldPureComponentUpdate from 'react-pure-render/function';
+import Map from 'google-map-react';
+import MyGreatPlace from './my_great_place';
 import {MapStyle} from './MapStyle.css';
 
-
-
-const Map = ({ text  }) => <div>{text}</div>;
+const TestMap = ({ text  }) => <div>{text}</div>;
 
 class TruckMap extends Component {
+  static propTypes ={
+    center: PropTypes.array,
+    zoom: PropTypes.number,
+    greatPlaceCoords: PropTypes.any,
+  }
+
   static defaultProps = {
     center: {lat: 45.6770, lng: -111.0429},
     zoom: 13,
+    greatPlaceCoords: {lat: 45.6770, lng:-111.0429},
   };
 
+  /////
+  //shouldComponentUpdate = shouldPureComponentUpdate;
+
+  constructor(props) {
+    super(props);
+  }
+  /////
 
 render(){
   const mapStyle = {
@@ -26,9 +41,10 @@ render(){
           defaultCenter={this.props.center}
           defaultZoom={this.props.zoom}
           bootstrapURLKeys={{key:'AIzaSyCsXWyNVyTn1_WFbABZWA0NHk-qsNwx0gg'}}
-
         >
-          <Map
+        <MyGreatPlace lat={45.7960} lng={-111.0429} text={'A'} />
+        <MyGreatPlace {...this.props.greatPlaceCoords} text={'B'} />
+          <TestMap
             lat={45.6770}
             lng={-111.0429}
           />
