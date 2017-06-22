@@ -3,7 +3,10 @@ var mongoose = require('mongoose');
 var TruckSchema = new mongoose.Schema({
     //schema = blueprint
     name: { required: true, type: String },
-    location: [Number],
+    location: {
+          lat: {type: Number},
+          lng: {type: Number}
+    },
     hours: String,
     open: Boolean,
     description: String,
