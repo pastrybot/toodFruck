@@ -7,6 +7,10 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var session = require('express-session');
 var passport = require('passport');
+var routes = require('./routes/index');
+var Truck = require('./models/truckModel');
+var mongoose = require('mongoose');
+
 
 
 //this is where we are just importing a simple function
@@ -14,6 +18,7 @@ require('./config/database-connect')();
 
 
 var app = express();
+
 
 // view engine setup
 
@@ -46,6 +51,8 @@ app.use(session({
 app.get('/test', function (req, res){
   res.json({message: "App is barely functioning"})
 });
+
+routes(app);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
