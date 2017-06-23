@@ -43,7 +43,7 @@ render(){
           bootstrapURLKeys={{key:'AIzaSyCsXWyNVyTn1_WFbABZWA0NHk-qsNwx0gg'}}
         >
         <TruckMarker lat={45.7960} lng={-111.0429} text={'A'} />
-        <TruckMarker {...this.props.TruckMarkerCoords} text={'B'} />
+        <TruckMarker {...this.props.TruckMarkerCoords} /> 
           <TestMap
             lat={45.6770}
             lng={-111.0429}
