@@ -1,5 +1,5 @@
-const K_WIDTH = 20;
-const K_HEIGHT = 20;
+const K_SIZE = 20;
+
 
 const markerStyles = {
   // initially any map object has left top corner at lat lng coordinates
@@ -7,12 +7,12 @@ const markerStyles = {
 
   // it's on you to set object origin to 0,0 coordinates
   position: 'absolute',
-  width: K_WIDTH,
-  height: K_HEIGHT,
-  left: -K_WIDTH / 4,
-  top: -K_HEIGHT / 4,
+  width: K_SIZE,
+  height: K_SIZE,
+  left: -K_SIZE / 4,
+  top: -K_SIZE / 4,
 
-  borderRadius: K_HEIGHT,
+  borderRadius: K_SIZE,
   backgroundColor: '#70C1B3',
   textAlign: 'center',
   color: 'white',
@@ -23,4 +23,9 @@ const markerStyles = {
 
 };
 
-export {markerStyles};
+const markerHoverStyles = {
+  ...markerStyles,
+  backgroundColor: 'orange',
+};
+
+export {markerStyles, markerHoverStyles, K_SIZE};

@@ -3,7 +3,9 @@ import GoogleMapReact from 'google-map-react';
 //import shouldPureComponentUpdate from 'react-pure-render/function';
 import Map from 'google-map-react';
 import TruckMarker from './TruckMarker';
+import MarkerHover from './MarkerHover'
 import {MapStyle} from './MapStyle.css';
+import {K_SIZE} from './MarkerStyles'
 
 const TestMap = ({ text  }) => <div>{text}</div>;
 
@@ -15,7 +17,7 @@ class TruckMap extends Component {
   }
 
   static defaultProps = {
-    center: {lat: 45.6770, lng: -111.0429},
+    center: {lat: 45.6770, lng: -111.0429}, // [45, -111] is also valid
     zoom: 13,
     TruckMarkerCoords: {lat: 45.6770, lng:-111.0429},
   };
@@ -43,7 +45,7 @@ render(){
           bootstrapURLKeys={{key:'AIzaSyCsXWyNVyTn1_WFbABZWA0NHk-qsNwx0gg'}}
         >
         <TruckMarker lat={45.7960} lng={-111.0429} text={'A'} />
-        <TruckMarker {...this.props.TruckMarkerCoords} /> 
+        <MarkerHover {...this.props.TruckMarkerCoords} />
           <TestMap
             lat={45.6770}
             lng={-111.0429}
