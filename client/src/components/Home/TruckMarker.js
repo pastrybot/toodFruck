@@ -1,6 +1,6 @@
 import React, {PropTypes, Component} from 'react';
 //import shouldPureComponentUpdate from 'react-pure-render/function';
-import {markerStyles} from './MarkerStyles.js';
+import {markerStyles} from './MarkerStyles.css';
 
 
 export default class TruckMarker extends Component {
@@ -14,7 +14,7 @@ export default class TruckMarker extends Component {
 
   render() {
     return (
-       <div style={markerStyles}>
+       <div className={markerStyles}>
           {this.props.text}
        </div>
     );

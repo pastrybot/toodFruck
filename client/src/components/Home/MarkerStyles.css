@@ -1,0 +1,21 @@
+/*.markerStyles{
+  background-image: url("https://d30y9cdsu7xlg0.cloudfront.net/png/128876-200.png");
+  background-position: center;
+  background-size: contain;
+  width: 40px;
+  height: 40px;
+}*/
+
+.markerStyles{
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  background-color: #70c1b3;
+  opacity: 0.9;
+  transition: background-color 0.4s ease;
+  cursor: pointer;
+}
+
+.markerStyles:hover{
+  background-color: orange;
+}
