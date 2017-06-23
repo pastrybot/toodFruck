@@ -8,7 +8,7 @@ exports.getAll = (req, res) => {
       if(err) throw err;
       res.send({data})
     })
-  }
+  };
 exports.makeNew = (req, res) => {
  var newTruck = new Truck();
  newTruck.loadData(req.body);
@@ -43,9 +43,12 @@ exports.edit = (req, res) => {
 exports.remove = (req, res) => {
   Truck.remove({_id: req.params.truck_id}, function(err) {
     if (err) {
+      console.log("is the truck deleted?");
       res.send(err);
     } else {
+
       res.send("Truck deleted");
+
     }
   })
 }
