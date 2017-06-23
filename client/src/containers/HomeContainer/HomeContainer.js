@@ -25,7 +25,9 @@ class HomeContainer extends Component{
     return(
       <div>
         { this.state.loaded ?
-          <Home /> : null }
+          <Home
+              trucks={this.state.trucks}
+          /> : null }
       </div>
     )
   }

@@ -12,6 +12,7 @@ class TruckMap extends Component {
     center: PropTypes.array,
     zoom: PropTypes.number,
     TruckMarkerCoords: PropTypes.any,
+    trucks: PropTypes.array
   }
 
   static defaultProps = {
@@ -41,13 +42,12 @@ render(){
           defaultCenter={this.props.center}
           defaultZoom={this.props.zoom}
           bootstrapURLKeys={{key:'AIzaSyCsXWyNVyTn1_WFbABZWA0NHk-qsNwx0gg'}}
+
         >
-        <TruckMarker lat={45.7960} lng={-111.0429} text={'A'} />
-        <TruckMarker {...this.props.TruckMarkerCoords} />
-          <TestMap
-            lat={45.6770}
-            lng={-111.0429}
-          />
+        { this.props.trucks.map((truck, index) =>
+            <TruckMarker lat={truck.location.lat} lng={truck.location.lng} text={truck.name}/>
+        )}
+
         </GoogleMapReact>
         </div>
       );
