@@ -1,22 +1,22 @@
 import React, { Component } from 'react';
 import $ from 'jquery';
-import TruckCardComponent from '../../components';
+import TruckMarkerComponent from '../../components';
 
 //stateless function that displays a list of heroes
 
-class TruckCardContainer extends Component {
+class TruckMarkerContainer extends Component {
 
   state = {
-    TruckCard: undefined
+    TruckMarker: undefined
   }
 
  loadTrucks = this.loadTrucks.bind(this)
 
  componentDidMount= () => this.loadTrucks()
 
-  loadTrucks(){
+  loadTruckMarker(){
     $.ajax({
-      url: '/api/trucks',
+      url: `/api/trucks/${this.props.params.truck_id}`,
       method: 'GET'
     }).done((response) => {
       console.log(response, "I am data");
@@ -36,7 +36,7 @@ class TruckCardContainer extends Component {
       <div className="">
 
         { this.state.trucks ?
-          <TruckCardComponent trucks={this.state.trucks}
+          <TruckMarkerComponent truckMarker={this.state.truckMarker}
 
                       />
           : <h5>loading...</h5>
@@ -49,4 +49,4 @@ class TruckCardContainer extends Component {
 }
 
 
-export default TruckCardContainer;
+export default TruckMarkerContainer;
