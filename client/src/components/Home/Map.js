@@ -2,7 +2,7 @@ import React, { PropTypes, Component } from 'react';
 import GoogleMapReact from 'google-map-react';
 //import shouldPureComponentUpdate from 'react-pure-render/function';
 import Map from 'google-map-react';
-import TruckMarker from './TruckMarker';
+import {TruckMarkerContainer} from '../../containers';
 import {MapStyle} from './MapStyle.css';
 
 const TestMap = ({ text  }) => <div>{text}</div>;
@@ -45,7 +45,7 @@ render(){
 
         >
         { this.props.trucks.map((truck, index) =>
-            <TruckMarker lat={truck.location.lat} lng={truck.location.lng} text={truck.name}/>
+            <TruckMarkerContainer key={index} lat={truck.location.lat} lng={truck.location.lng} text={truck.name} id={truck._id}/>
         )}
 
         </GoogleMapReact>
