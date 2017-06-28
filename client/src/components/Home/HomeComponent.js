@@ -4,7 +4,9 @@ import TruckMap from './Map.js';
 const HomeComponent = (props) => {
   return(
     <div>
-      <TruckMap />
+      <TruckMap
+          trucks={props.trucks}
+        />
     </div>
   )
 }
