@@ -4,22 +4,13 @@ import {markerStyles} from './MarkerStyles.css';
 import {TruckCardComponent} from '../../components';
 
 
-export default class TruckMarker extends Component {
-  static propTypes = {
-    text: PropTypes.string,
-    isActive: false
-  };
+const TruckMarker = (props) => {
 
-
-  static defaultProps = {};
-
-  //shouldComponentUpdate = shouldPureComponentUpdate;
-
-  render() {
-    return (
-       <div className={markerStyles} onClick={(event) => this.props.setActive(event)}>
-        {this.props.isActive ? <TruckCardComponent /> : this.props.text}
-       </div>
-    );
-  }
+  return (
+     <div className={markerStyles}>
+      {props.truckMarker.name}
+     </div>
+  );
 }
+
+export default TruckMarker
