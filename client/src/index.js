@@ -2,7 +2,7 @@
 - HomeContainer (loads all trucks from server)
   - HomeComponent
     - Map Container (keeps track of map state)
-      - Google Map React
+      - MapComponent (Google Map React)
         - TruckMarker(s)
           - TruckCard
 */
