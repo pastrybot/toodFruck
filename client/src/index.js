@@ -1,3 +1,13 @@
+/*
+- HomeContainer (loads all trucks from server)
+  - HomeComponent
+    - Map Container (keeps track of map state)
+      - Google Map React
+        - TruckMarker(s)
+          - TruckCard
+*/
+
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Router, Route, browserHistory, IndexRoute} from 'react-router'
@@ -13,9 +23,6 @@ ReactDOM.render(
       <Route path="/home" component={HomeContainer} />
       <Route path="/about" component={AboutContainer}/>
       <Route path="/trucks" component={TruckCardContainer}/>
-
-
-
       <IndexRoute component={HomeContainer} />
     </Route>
   </Router>,

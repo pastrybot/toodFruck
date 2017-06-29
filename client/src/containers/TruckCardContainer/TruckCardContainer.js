@@ -1,11 +1,8 @@
 import React, { Component } from 'react';
 import $ from 'jquery';
-import TruckCardComponent from '../../components';
-
-//stateless function that displays a list of heroes
+import TruckCard from '../../components';
 
 class TruckCardContainer extends Component {
-
   state = {
     TruckCard: undefined
   }
@@ -24,19 +21,12 @@ class TruckCardContainer extends Component {
     })
   }
 
-  updateText = (event) => this.setState({ text: event.target.value })
-
-
-
-
-    //any time we change text, it will auto-bind, and auto-update with the event-handler
-
   render() {
     return (
-      <div className="">
+      <div>
 
         { this.state.trucks ?
-          <TruckCardComponent trucks={this.state.trucks}
+          <TruckCard trucks={this.state.trucks}
 
                       />
           : <h5>loading...</h5>
