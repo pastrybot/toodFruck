@@ -37,8 +37,8 @@ render(){
           defaultCenter={this.props.center}
           defaultZoom={this.props.zoom}
           bootstrapURLKeys={{key:'AIzaSyCsXWyNVyTn1_WFbABZWA0NHk-qsNwx0gg'}}
-
         >
+        
         { this.props.trucks.map((truck, index) =>
             <TruckMarker lat={truck.location.lat} lng={truck.location.lng} text={truck.name}/>
         )}
