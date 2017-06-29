@@ -3,7 +3,6 @@ import {Home} from '../../components';
 import $ from 'jquery';
 
 class HomeContainer extends Component{
-
   state = {
     trucks: undefined,
     loaded: false

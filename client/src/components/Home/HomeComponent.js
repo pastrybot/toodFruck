@@ -1,10 +1,10 @@
 import React from 'react';
-import TruckMap from './Map.js';
+import {MapContainer} from '../../containers';
 
 const HomeComponent = (props) => {
   return(
     <div>
-      <TruckMap
+      <MapContainer
           trucks={props.trucks}
         />
     </div>
