@@ -1,9 +1,9 @@
 import React, {PropTypes, Component} from 'react';
 //import shouldPureComponentUpdate from 'react-pure-render/function';
-import {markerStyles} from './MarkerStyles.css';
+import {markerStyles, closedMarkerStyles} from './MarkerStyles.css';
 
 
-export default class TruckMarker extends Component {
+class TruckMarker extends Component {
   static propTypes = {
     text: PropTypes.string
   };
@@ -13,10 +13,13 @@ export default class TruckMarker extends Component {
   //shouldComponentUpdate = shouldPureComponentUpdate;
 
   render() {
+    console.log(this.props, "PROPS");
     return (
-       <div className={markerStyles}>
-          {this.props.text}
+       <div className={this.props.isActive ? markerStyles : closedMarkerStyles}>
+          {this.props.children}
        </div>
     );
   }
 }
+
+export default TruckMarker;
