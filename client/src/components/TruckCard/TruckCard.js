@@ -1,24 +1,25 @@
 import React from 'react';
-import {TruckCardContainer} from '../../containers';
-
 import {truckCard, name, image, location,
  hours, description, social} from './cardStyle.css';
 
   const TruckCard = (props) => {
     return(
       <div>
-       <TruckCardContainer />
       <div className={truckCard}>
         <h2 className={name}>{ props.truck.name }</h2>
         <img className={image} alt="" src={ props.truck.img }/>
-          <ol>
-            <li className={location}>{ props.truck.location }</li>
-           <li className={hours}>{ props.truck.hours }</li>
-            <li className={description}>{ props.truck.description }</li>
-            <li className={social}>{ props.truck.social }</li>
-          </ol>
+
+       <div className={hours}>{ props.truck.hours }</div>
+       <div className={description}>{ props.truck.description }</div>
+
       </div>
       </div>
     )
   }
 export default TruckCard;
+
+// <img className={image} alt="" src={ props.truck.img }/>
+//   <ol>
+// <div className={location}>{ props.truck.location }</div>
+//<div className={social}>{ props.truck.social }</div>
+//   </ol>

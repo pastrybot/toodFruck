@@ -1,14 +1,17 @@
 import React, { Component } from 'react';
 import $ from 'jquery';
-import TruckMarker from '../../components';
+import {TruckMarker} from '../../components';
 
-class Active extends React.Component {
-  constructor(props) {
-    super(props);
-    this.handleOpenCard = this.handleOpenCard.bind(this);
-    this.handleCloseCard = this.handleCloseCard.bind(this);
-    this.state = { isActive: false };
+class TruckMarkerContainer extends Component {
+  state = {
+    truckMarker: undefined,
+    loading: true
   }
+
+  handleOpenCard = this.handleOpenCard.bind(this);
+  handleCloseCard = this.handleCloseCard.bind(this);
+  loadTruckMarker = this.loadTruckMarker.bind(this);
+
   handleOpenCard(){
     this.setState({isActive: true});
   }
@@ -17,27 +20,6 @@ class Active extends React.Component {
     this.setState({isActive: false});
   }
 
-  render() {
-    const isActive = this.state.isActive;
-
-    let marker = null;
-    if (isActive) {
-      marker = <TruckMarker onClick={this.handleCloseCard} />;
-    } else {
-      marker = <TruckMarker onClick={this.handleOpenCard} />;
-    }
-  }
-
-}
-
-class TruckMarkerContainer extends Component {
-  state = {
-    truckMarker: undefined,
-    isActive: false,
-    loading: true
-  }
-
- loadTruckMarker = this.loadTruckMarker.bind(this)
  componentDidMount= () => this.loadTruckMarker()
 
   loadTruckMarker(){
@@ -49,8 +31,6 @@ class TruckMarkerContainer extends Component {
       this.setState({ truckMarker: response, loading: false })
     })
   }
-
-  //updateText = (event) => this.setState({ text: event.target.value })
 
   render() {
     return (

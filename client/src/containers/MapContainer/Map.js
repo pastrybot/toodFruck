@@ -2,6 +2,10 @@ import React, { PropTypes, Component } from 'react';
 import {MapComponent} from '../../components';
 
 class MapContainer extends Component {
+  state={
+    isActive: true
+  }
+
   static propTypes ={
     center: PropTypes.object,
     zoom: PropTypes.number,
@@ -20,6 +24,7 @@ render(){
         center={this.props.center}
         zoom={this.props.zoom}
         trucks={this.props.trucks}
+        isActive={this.state.isActive}
       />
     </div>
       );

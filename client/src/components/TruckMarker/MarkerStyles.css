@@ -16,6 +16,12 @@
   cursor: pointer;
 }
 
-.markerStyles:hover{
+.closedMarkerStyles{
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
   background-color: orange;
+  opacity: 0.9;
+  transition: background-color 0.4s ease;
+  cursor: pointer;
 }
