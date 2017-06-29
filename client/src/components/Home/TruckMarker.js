@@ -1,16 +1,22 @@
 import React, {PropTypes, Component} from 'react';
 //import shouldPureComponentUpdate from 'react-pure-render/function';
 import {markerStyles} from './MarkerStyles.css';
-import {TruckCardComponent} from '../../components';
 
 
-const TruckMarker = (props) => {
+export default class TruckMarker extends Component {
+  static propTypes = {
+    text: PropTypes.string
+  };
 
-  return (
-     <div className={markerStyles}>
-      {props.truckMarker.name}
-     </div>
-  );
+  static defaultProps = {};
+
+  //shouldComponentUpdate = shouldPureComponentUpdate;
+
+  render() {
+    return (
+       <div className={markerStyles}>
+          {this.props.text}
+       </div>
+    );
+  }
 }
-
-export default TruckMarker
