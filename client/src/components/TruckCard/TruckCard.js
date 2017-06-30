@@ -1,25 +1,25 @@
 import React from 'react';
-import {truckCard, name, image, location,
- hours, description, info, wrapper, facebook } from './cardStyle.css';
+import {truckCard, photobooth, gradient, location,
+ hours, description, info, facebook } from './cardStyle.css';
 import {Link} from 'react-router';
 
   const TruckCard = (props) => {
     return(
-      <div className={wrapper}>
         <div className={truckCard}>
-          <h2 className={name}>{ props.truck.name }</h2>
-          <img className={image} alt="" src={ props.truck.img }/>
-            <div className={info}>
-              <div className={hours}>{ props.truck.hours }</div>
-              <div className={description}>{ props.truck.description }</div>
-              <a target="_blank" href={"http://www."+ props.truck.social.facebook}>
-                <div className={facebook}></div>
-              </a>
-              
-            </div>
-        </div>
-      </div>
+          <div className={photobooth}>
+          <div className={gradient}></div>
+            <h2>{ props.truck.name }</h2>
+            <img alt="" src={ props.truck.img }/>
 
+          </div>
+          <div className={info}>
+            <div className={hours}>🕒 { props.truck.hours }</div>
+            <div className={description}>{ props.truck.description }</div>
+            <a target="_blank" href={"http://www."+ props.truck.social.facebook}>
+              <figure className={facebook}></figure>
+            </a>
+          </div>
+        </div>
     )
   }
 export default TruckCard;

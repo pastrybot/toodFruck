@@ -1,34 +1,60 @@
 .truckCard{
-
+  width: 150px;
+  overflow: hidden;
+  background-color: white;
+  font-family: 'PT Sans', sans-serif;
+  border-radius: 3px;
+  padding-bottom: 4px;
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.25);
 }
-.image {
-    position: relative;
-    float: left;
-    width:  relative;
+
+.photobooth{
+  height: 100px;
+  position: relative;
+}
+
+.truckCard img {
+    position: absolute;
     height: 100px;
-    background-position: 50% 50%;
-    background-repeat:   no-repeat;
-    background-size:     cover;
+    width: 100%;
+}
+
+.gradient{
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.69) , transparent);
+  box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.25);
+  height: 100px;
+  width: 100%;
+  position: absolute;
+  z-index: 50;
+}
+
+.truckCard h2{
+  font-size: 15pt;
+  font-weight: 700;
+  bottom: 0px;
+  padding-left: 5px;
+  color: white;
+  z-index: 100;
+  position: absolute;
 }
 
 .info{
   display: inline-block;
-  font-family:
+  padding: 5px;
 }
-.name{
-  font-family: 'PT Sans', sans-serif;
-}
-.wrapper{
-  width: 300px;
-  overflow: hidden;
-  background-color: white;
-  border: 2px solid #70c1b3;
 
+.info *{
+  padding-bottom: 3px;
 }
+
+.hours{
+  font-weight: 700;
+}
+
 .facebook{
+  margin-top: 5px;
   background-image: url("https://en.facebookbrand.com/wp-content/uploads/2016/05/FB-fLogo-Blue-broadcast-2.png");
   background-size: contain;
-  height: 20px;
-  width: 20px;
-  
+  height: 17px;
+  width: 17px;
 }
