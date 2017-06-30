@@ -4,7 +4,7 @@ import {MapComponent} from '../../components';
 class MapContainer extends Component {
   state={
     isActive: false,
-
+    activeCardId: undefined
   }
 
 toggleCard = this.toggleCard.bind(this);
@@ -20,9 +20,9 @@ toggleCard = this.toggleCard.bind(this);
     zoom: 13,
   };
 
-  toggleCard(){
-    this.setState({isActive: !this.state.isActive } );
-  }
+  toggleCard(id){
+    this.setState({isActive: !this.state.isActive, activeCardId: id } );
+    }
 
 
 
@@ -35,6 +35,8 @@ render(){
         trucks={this.props.trucks}
         isActive={this.state.isActive}
         toggleCard={this.toggleCard}
+
+
 
       />
     </div>

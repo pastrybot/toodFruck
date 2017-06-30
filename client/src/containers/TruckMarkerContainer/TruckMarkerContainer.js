@@ -31,7 +31,7 @@ class TruckMarkerContainer extends Component {
       <div>
         { (!this.state.loading) ?
           <TruckMarker truckMarker={this.state.truckMarker}
-                        
+
                         />
 
           : <h5> X </h5>
