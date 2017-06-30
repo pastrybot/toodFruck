@@ -2,6 +2,9 @@
 
 
 }
+.hide {
+  display: none;
+}
 .image {
     position: relative;
     float: left;

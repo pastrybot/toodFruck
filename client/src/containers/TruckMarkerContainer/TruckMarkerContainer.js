@@ -8,17 +8,11 @@ class TruckMarkerContainer extends Component {
     loading: true
   }
 
-  handleOpenCard = this.handleOpenCard.bind(this);
-  handleCloseCard = this.handleCloseCard.bind(this);
+
+
   loadTruckMarker = this.loadTruckMarker.bind(this);
 
-  handleOpenCard(){
-    this.setState({isActive: true});
-  }
 
-  handleCloseCard() {
-    this.setState({isActive: false});
-  }
 
  componentDidMount= () => this.loadTruckMarker()
 
@@ -36,7 +30,10 @@ class TruckMarkerContainer extends Component {
     return (
       <div>
         { (!this.state.loading) ?
-          <TruckMarker truckMarker={this.state.truckMarker} />
+          <TruckMarker truckMarker={this.state.truckMarker}
+                        
+                        />
+
           : <h5> X </h5>
         }
       </div>
