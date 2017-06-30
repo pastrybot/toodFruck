@@ -1,4 +1,4 @@
-import React from 'react';import React from 'react';
+import React from 'react';
 import GoogleMapReact from 'google-map-react';
 // import Map from 'google-map-react'; ????
 import TruckMarker from '../TruckMarker/TruckMarker';
