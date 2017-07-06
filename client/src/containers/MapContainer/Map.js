@@ -3,8 +3,12 @@ import {MapComponent} from '../../components';
 
 class MapContainer extends Component {
   state={
-    isActive: true
+    isActive: false,
+    activeCardId: undefined
+
   }
+
+toggleCard = this.toggleCard.bind(this);
 
   static propTypes ={
     center: PropTypes.object,
@@ -17,6 +21,10 @@ class MapContainer extends Component {
     zoom: 13,
   };
 
+  toggleCard(id){
+    this.setState({isActive: !this.state.isActive, activeCardId: id } );
+    }
+
 render(){
   return (
     <div>
@@ -25,11 +33,11 @@ render(){
         zoom={this.props.zoom}
         trucks={this.props.trucks}
         isActive={this.state.isActive}
+        toggleCard={this.toggleCard}
       />
     </div>
       );
     }
-
   }
 
 export default MapContainer;

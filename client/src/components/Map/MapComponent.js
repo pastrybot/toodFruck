@@ -1,16 +1,16 @@
 import React from 'react';
 import GoogleMapReact from 'google-map-react';
 // import Map from 'google-map-react'; ????
-import TruckMarker from '../TruckMarker/TruckMarker';
-import {MapStyle} from './MapStyle.css';
-import TruckCard from '../TruckCard/TruckCard'
+import MarkerWrapper from '../MarkerWrapper/MarkerWrapper';
+import {MapStyle, truckPin} from './MapStyle.css';
+import TruckCard from '../TruckCard/TruckCard';
+
 
 const MapComponent = (props) => {
   const mapDimensions = {
       width: '80%',
       height: '100%',
     };
-
   return(
     <div style={mapDimensions} className={MapStyle}>
     <GoogleMapReact
@@ -18,13 +18,15 @@ const MapComponent = (props) => {
           defaultZoom={props.zoom}
           bootstrapURLKeys={{key:'AIzaSyCsXWyNVyTn1_WFbABZWA0NHk-qsNwx0gg'}}
     >
-
     { props.trucks.map((truck, index) =>
-        <TruckMarker isActive={props.isActive} lat={truck.location.lat} lng={truck.location.lng} text={truck.name}>
-          <TruckCard truck={truck}/>
-        </TruckMarker>
-    )}
+        <MarkerWrapper id={"truck_" + index} key={index} isActive={props.isActive} toggleCard={props.toggleCard}
+          lat={truck.location.lat} lng={truck.location.lng} text={truck.name}>
+          { props.isActive ? <TruckCard truck={truck}/> : <div className={truckPin}>
+              <span> {truck.name} </span>
+            </div>}
+        </MarkerWrapper>
 
+    )}
         </GoogleMapReact>
         </div>
   )

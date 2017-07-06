@@ -16,6 +16,10 @@ class HomeContainer extends Component{
       method: 'GET'
     }).done((response) => {
       console.log(response, "I am a truck's data");
+      response.data = response.data.map(function(truck, index) {
+        truck.show = false
+        return truck;
+      })
       this.setState({ trucks: response.data, loaded: true })
     })
   }
