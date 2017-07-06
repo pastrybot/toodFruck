@@ -1,9 +1,10 @@
 import React, {PropTypes, Component} from 'react';
 //import shouldPureComponentUpdate from 'react-pure-render/function';
 import {markerStyles, closedMarkerStyles} from './MarkerStyles.css';
+import $ from 'jquery';
 
 
-class TruckMarker extends Component {
+class MarkerWrapper extends Component {
   static propTypes = {
     text: PropTypes.string
   };
@@ -11,15 +12,15 @@ class TruckMarker extends Component {
   static defaultProps = {};
 
   //shouldComponentUpdate = shouldPureComponentUpdate;
-
   render() {
     console.log(this.props, "PROPS");
     return (
-       <div className={this.props.isActive ? markerStyles : closedMarkerStyles}>
+       <div onClick={() => this.props.toggleCard()}
+        className={this.props.isActive ? markerStyles : closedMarkerStyles}>
           {this.props.children}
        </div>
     );
   }
 }
 
-export default TruckMarker;
+export default MarkerWrapper;
