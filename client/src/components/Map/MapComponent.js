@@ -14,6 +14,7 @@ const MapComponent = (props) => {
   return(
     <div style={mapDimensions} className={MapStyle}>
     <GoogleMapReact
+          onClick={() => props.clickMap()}
           defaultCenter={props.center}
           defaultZoom={props.zoom}
           bootstrapURLKeys={{key:'AIzaSyCsXWyNVyTn1_WFbABZWA0NHk-qsNwx0gg'}}

@@ -5,7 +5,6 @@ class MapContainer extends Component {
   state={
     isActive: false,
     activeCardId: undefined
-
   }
 
 toggleCard = this.toggleCard.bind(this);
@@ -22,8 +21,10 @@ toggleCard = this.toggleCard.bind(this);
   };
 
   toggleCard(id){
-    this.setState({isActive: !this.state.isActive, activeCardId: id } );
+    this.setState({isActive: true, activeCardId: id } );
     }
+
+  clickMap = () => this.setState({isActive: false});
 
 render(){
   return (
@@ -35,6 +36,7 @@ render(){
         isActive={this.state.isActive}
         toggleCard={this.toggleCard}
         activeCardId={this.state.activeCardId}
+        clickMap={this.clickMap}
       />
     </div>
       );
