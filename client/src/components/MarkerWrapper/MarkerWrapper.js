@@ -15,7 +15,7 @@ class MarkerWrapper extends Component {
   render() {
     console.log(this.props, "PROPS");
     return (
-       <div onClick={() => this.props.toggleCard()}
+       <div onClick={() => this.props.toggleCard(this.props.id)}
         className={this.props.isActive ? markerStyles : closedMarkerStyles}>
           {this.props.children}
        </div>

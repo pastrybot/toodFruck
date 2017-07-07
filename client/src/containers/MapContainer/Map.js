@@ -34,6 +34,7 @@ render(){
         trucks={this.props.trucks}
         isActive={this.state.isActive}
         toggleCard={this.toggleCard}
+        activeCardId={this.state.activeCardId}
       />
     </div>
       );
