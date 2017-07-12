@@ -14,9 +14,10 @@ import {Router, Route, browserHistory, IndexRoute} from 'react-router'
 require('bootstrap/dist/css/bootstrap.css');
 
 import App from './App';
-import {HomeContainer, AboutContainer, TruckCardContainer} from './containers';
+import {HomeContainer, AboutContainer, TruckCardContainer, PostTruckContainer} from './containers';
 import SignUpContainer from './userAuth/SignUpContainer';
 import LoginContainer from './userAuth/LoginContainer';
+
 //this is where we define the path.  You can name the path anything you want.
 
 ReactDOM.render(
@@ -27,6 +28,7 @@ ReactDOM.render(
       <Route path="/trucks" component={TruckCardContainer}/>
       <Route path="/login" component={LoginContainer}/>
       <Route path="/signup" component={SignUpContainer}/>
+      <Route path="/signup/newTruck" component={PostTruckContainer}/>
       <IndexRoute component={HomeContainer} />
     </Route>
   </Router>,

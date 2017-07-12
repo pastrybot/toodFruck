@@ -26,9 +26,9 @@ class LoginContainer extends Component{
       url: '/api/login',
       method: 'POST',
       data: local
-    }).done((response) => (response._id) ?
-    browserHistory.push('/show') :
-    browserHistory.push(`/error/${response.message}`));
+    }).done((response) => (response.user) ?
+    browserHistory.push(`/`) :
+    browserHistory.push(`/login`));
   }
   render(){
     return(

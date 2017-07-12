@@ -3,6 +3,7 @@ import {browserHistory} from 'react-router';
 import $ from 'jquery';
 import SignUpForm from './SignUpForm';
 
+
 class SignUpContainer extends Component{
   state = {
     email: undefined,
@@ -23,12 +24,12 @@ class SignUpContainer extends Component{
       url:'/api/signup',
       method: 'POST',
       data: local
-    }).done((response) => {
-    console.log(response, 'after post');
-    (response._id) ? browserHistory.push('/login') :
-      browserHistory.push(`/error/${response.message}`);
-    })
-  }
+    }).done((response) => (response._id) ?
+     browserHistory.push('/signup/newTruck') :
+     browserHistory.push(`/error/${response.message}`))
+
+    }
+
   render(){
     return(
       <div>
