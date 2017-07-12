@@ -13,6 +13,10 @@ const NavBar = (props) => {
 							<li><a href="/trucks">Local Trucks</a></li>
 
 						</ul>
+						<ul>
+							<li><a href="/signup">Sign Up</a></li>
+							<li><a href="/login">Login</a></li>
+						</ul>
 					</nav>
 				</header>
 			</div>

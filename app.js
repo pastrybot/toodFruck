@@ -8,6 +8,7 @@ var bodyParser = require('body-parser');
 var session = require('express-session');
 var passport = require('passport');
 var routes = require('./routes/index');
+var auth = require('./routes/auth');
 var Truck = require('./models/truckModel');
 var mongoose = require('mongoose');
 
@@ -47,12 +48,18 @@ app.use(session({
  }
 }));
 
+require('./config/passport')(passport); // pass passport for configuration
+require('./routes/auth')(app, passport); // load our routes and pass in our app and fully configured passport
+
+routes(app);
 
 app.get('/test', function (req, res){
   res.json({message: "App is barely functioning"})
 });
 
-routes(app);
+
+
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -69,7 +76,7 @@ app.use(function(err, req, res, next) {
 
   // render the error page
   res.status(err.status || 500);
-  res.render('error');
+  res.send('error');
 });
 
 app.get('*', function (req, res) {

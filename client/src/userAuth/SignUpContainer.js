@@ -31,10 +31,12 @@ class SignUpContainer extends Component{
   }
   render(){
     return(
+      <div>
       <SignUpForm
         updateField = {this.updateField}
         handleSubmit = {this.handleSubmit}
       />
+      </div>
     )
 
   }

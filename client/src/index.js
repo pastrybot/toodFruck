@@ -15,6 +15,8 @@ require('bootstrap/dist/css/bootstrap.css');
 
 import App from './App';
 import {HomeContainer, AboutContainer, TruckCardContainer} from './containers';
+import SignUpContainer from './userAuth/SignUpContainer';
+import LoginContainer from './userAuth/LoginContainer';
 //this is where we define the path.  You can name the path anything you want.
 
 ReactDOM.render(
@@ -23,6 +25,8 @@ ReactDOM.render(
       <Route path="/home" component={HomeContainer} />
       <Route path="/about" component={AboutContainer}/>
       <Route path="/trucks" component={TruckCardContainer}/>
+      <Route path="/login" component={LoginContainer}/>
+      <Route path="/signup" component={SignUpContainer}/>
       <IndexRoute component={HomeContainer} />
     </Route>
   </Router>,

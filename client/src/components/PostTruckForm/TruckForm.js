@@ -6,32 +6,32 @@ const TruckForm = (props) => {
       <form className={form} onSubmit={(event) => props.handleSubmit(event)}>
       <h1 className={}>Enter Truck Name</h1>
         <div className={}>
-          <lable className={}>Name:</lable>
+          <label className={}>Name:</label>
           <input type="text" placeholder="Name"
             onChange={(event) => props.onChange("name", event.target.value)}/>
         </div>
         <div className={}>
-          <lable className={}>Image:</lable>
+          <label className={}>Image:</label>
           <input type="text" placeholder="Image URL"
             onChange={(event) => props.onChange("image", event.target.value)}/>
         </div>
         <div className={}>
-          <lable className={}>Location:</lable>
+          <label className={}>Location:</label>
           <input type="text" placeholder="Location"
             onChange={(event) => props.onChange("Location", event.target.value)}/>
         </div>
         <div className={}>
-          <lable className={}>Hours:</lable>
+          <label className={}>Hours:</label>
           <input type="text" placeholder="Open Hours"
             onChange={(event) => props.onChange("hours", event.target.value)}/>
         </div>
         <div className={}>
-          <lable className={}>Description:</lable>
+          <label className={}>Description:</label>
           <input type="text" placeholder="Description"
             onChange={(event) => props.onChange("description", event.target.value)}/>
         </div>
         <div className={}>
-          <lable className={}>Social Media:</lable>
+          <label className={}>Social Media:</label>
           <input type="text" placeholder="Social Media URL"
             onChange={(event) => props.onChange("social media", event.target.value)}/>
         </div>
