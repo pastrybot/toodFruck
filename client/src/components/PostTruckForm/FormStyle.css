@@ -1,4 +1,67 @@
-div form{
+.postFormContainer{
   float: left;
   padding: 50px;
+}
+
+::-webkit-input-placeholder{
+  color: #BABCC1;
+  font-size: 10pt;
+  font-family: 'Exo', sans-serif;
+}
+
+input:focus{
+  font-size: 10pt;
+  color: #494A4C;
+}
+
+.postFormContainer h3{
+  font-weight: 700;
+  color: #247BA0;
+}
+
+.postFormContainer div{
+  margin-bottom: 10px;
+}
+
+.postFormContainer label{
+  color: #494A4C;
+  display: block;
+  margin-bottom: 0px;
+  padding-top: 10px;
+}
+
+.postFormContainer input{
+  border: 0;
+  outline: 0;
+  border-bottom: 1px solid #247BA0;
+  width: 250px;
+}
+
+.lagLng div{
+  display: inline-block;
+  float: left;
+}
+
+.postFormContainer button{
+  margin-top: 25px;
+  border: none;
+  padding: 7px 15px;
+  font-weight: 700;
+  font-family: 'Exo', sans-serif;
+  color: white;
+}
+
+.postFormContainer button:hover{
+  background-color: #70C1B3;
+}
+
+
+.link{
+  color: white;
+  border-radius: 10px 0px 0px 10px;
+}
+
+.link:hover{
+  text-decoration: none;
+  color: white;
 }
