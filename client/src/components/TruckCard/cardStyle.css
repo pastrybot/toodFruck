@@ -50,11 +50,30 @@
 .hours{
   font-weight: 700;
 }
+.social{
+  display: flex;
+  justify-content: space-around;
 
+}
 .facebook{
-  margin-top: 5px;
+  display: flex;
   background-image: url("https://en.facebookbrand.com/wp-content/uploads/2016/05/FB-fLogo-Blue-broadcast-2.png");
   background-size: contain;
   height: 17px;
   width: 17px;
+}
+.instagram{
+  display: flex;
+  background-image: url("https://seeklogo.com/images/I/instagram-new-2016-logo-D9D42A0AD4-seeklogo.com.png");
+  background-size: contain;
+  height: 18px;
+  width: 18px;
+
+}
+.twitter{
+  display: flex;
+  background-image: url("https://cdn.worldvectorlogo.com/logos/twitter.svg");
+  background-size: cover;
+  height: 18px;
+  width: 21px;
 }
