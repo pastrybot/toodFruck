@@ -6,7 +6,6 @@ import {Link} from 'react-router';
 const SignUpForm = (props) => {
   return (
       <div className="container">
-        <h3>Sign Up!</h3>
         <form>
         <div>
           <label>E-mail</label>

@@ -12,8 +12,8 @@ const PostTruckForm = (props) => {
         </div>
         <div className="">
           <label className="">Image:</label>
-          <input type="text" placeholder="Image URL"
-            onChange={(event) => props.onChange("image", event.target.value)}/>
+          <input type="url" placeholder="Image URL"
+            onChange={(event) => props.onChange("img", event.target.value)}/>
         </div>
         <div className="">
           <label className="">Latitude:</label>

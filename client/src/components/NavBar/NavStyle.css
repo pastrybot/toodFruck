@@ -1,4 +1,16 @@
-
+/*.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}*/
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* close commented backslash hack */
 
 .header{
   padding: 40px 0px;
@@ -7,9 +19,9 @@
   font-weight: bolder;
   background-color: #247BA0;
   height: 100vh;
-  width: 20%;
-  min-width: 20%;
-  position: absolute;
+  width: 200px;
+  float: left;
+
 }
 
 .nav ul{

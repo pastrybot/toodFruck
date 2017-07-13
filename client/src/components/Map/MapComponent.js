@@ -22,7 +22,7 @@ const MapComponent = (props) => {
     { props.trucks.map((truck, index) =>
         <MarkerWrapper id={truck._id} key={index} isActive={props.isActive} toggleCard={props.toggleCard}
           lat={truck.lat} lng={truck.lng} text={truck.name}>
-          { props.isActive && props.activeCardId == truck._id ? <TruckCard truck={truck}/> : <div className={truckPin}>{truck.name}</div>}
+          { props.isActive && props.activeCardId == truck._id ? <TruckCard truck={truck}/> : <div className={truckPin}><span>{truck.name}</span></div>}
         </MarkerWrapper>
 
     )}

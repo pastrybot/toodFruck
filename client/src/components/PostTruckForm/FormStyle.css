@@ -1,3 +1,4 @@
 div form{
-  padding-left: 300px;
+  float: left;
+  padding: 50px;
 }

@@ -1,10 +1,10 @@
 import React from 'react';
-import {header, nav} from './NavStyle.css'
+import {clearfix, header, nav} from './NavStyle.css'
 
 const NavBar = (props) => {
 	console.log(props.user);
 		return (
-			<div>
+			<div className={clearfix}>
 				<header className={header}>
 					<nav className={nav}>
 						<ul>

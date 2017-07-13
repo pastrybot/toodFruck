@@ -13,7 +13,7 @@ var TruckSchema = new mongoose.Schema({
     facebook: String,
     twitter: String,
     instagram: String
-  }
+  
 
 
 
