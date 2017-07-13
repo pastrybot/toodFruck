@@ -1,10 +1,12 @@
 import React from 'react';
 import {Link} from 'react-router';
+import {formContainer, link, buttonOne, buttonTwo} from "./styles.css"
 
 const Login = (props) => {
   return (
-      <div className="container">
-        <h3>Login!</h3>
+      <div className={formContainer}>
+        <h3>Login</h3>
+        <p> Register your food truck and get it on the map!</p>
         <form>
         <div>
           <label>E-mail</label>
@@ -21,9 +23,11 @@ const Login = (props) => {
                  />
         </div>
         <div>
-          <button className="btn btn-primary" type="button" onClick={(event) =>
+          <button className={buttonOne} type="button" onClick={(event) =>
           props.handleSubmit(event)}>Login!</button>
-          <Link className="btn btn-default" to={'/signup'}>New User?</Link>
+          <button className={buttonTwo} type="button">
+            <Link className={link} to={'/signup'}>Sign Up</Link>
+          </button>
         </div>
         </form>
       </div>

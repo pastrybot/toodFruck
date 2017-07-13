@@ -1,12 +1,14 @@
 import React from 'react';
 import GoogleMapReact from 'google-map-react';
-import {formContainer, formContent} from './styles.css';
+import {formContainer, link, buttonOne, buttonTwo} from "./styles.css"
+
 import {Link} from 'react-router';
 
 const SignUpForm = (props) => {
   return (
       <div className={formContainer}>
-        <form className={formContent}>
+      <h3> Sign Up </h3>
+        <form>
         <div>
           <label>E-mail</label>
           <input
@@ -22,9 +24,11 @@ const SignUpForm = (props) => {
                  />
         </div>
         <div>
-          <button className="btn btn-primary" type="button" onClick={(event) =>
+          <button className={buttonOne} type="button" onClick={(event) =>
           props.handleSubmit(event)}>Sign Up!</button>
-          <Link className="btn btn-default" to={'/login'}>Back to Login</Link>
+          <button className={buttonTwo} type="button">
+            <Link className={link} to={'/login'}>Login</Link>
+          </button>
         </div>
         </form>
       </div>
