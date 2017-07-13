@@ -30,9 +30,9 @@ class PostTruckContainer extends Component {
   validate(){
     this.setState({
       valid: (this.state.name !== undefined )
-          && (this.state.lat !== undefined)
-          && (this.state.lng !== undefined)
-        
+          && (this.state.location !== undefined)
+          
+
     })
 
 
