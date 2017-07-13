@@ -21,7 +21,7 @@ const MapComponent = (props) => {
     >
     { props.trucks.map((truck, index) =>
         <MarkerWrapper id={truck._id} key={index} isActive={props.isActive} toggleCard={props.toggleCard}
-          lat={truck.location.lat} lng={truck.location.lng} text={truck.name}>
+          lat={truck.lat} lng={truck.lng} text={truck.name}>
           { props.isActive && props.activeCardId == truck._id ? <TruckCard truck={truck}/> : <div className={truckPin}>{truck.name}</div>}
         </MarkerWrapper>
 

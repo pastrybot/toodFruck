@@ -3,10 +3,8 @@ var mongoose = require('mongoose');
 var TruckSchema = new mongoose.Schema({
     //schema = blueprint
     name: { required: true, type: String },
-    location: {
-          lat: {type: Number},
-          lng: {type: Number}
-    },
+    lat: Number,
+    lng: Number,
     hours: String,
     open: Boolean,
     description: String,
@@ -29,7 +27,8 @@ var TruckSchema = new mongoose.Schema({
 
 TruckSchema.methods.loadData = function(data){
   this.name        = data.name ? data.name : this.name;
-  this.location    = data.location ? data.location : this.location;
+  this.lat         = data.lat ? data.lat : this.lat;
+  this.lng         = data.lng ? data.lng : this.lng;
   this.hours       = data.hours ? data.hours : this.hours;
   this.open        = data.open ? data.open : this.open;
   this.description = data.description ? data.description : this.description;

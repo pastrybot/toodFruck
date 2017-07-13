@@ -31,7 +31,7 @@ class PostTruckContainer extends Component {
     this.setState({
       valid: (this.state.name !== undefined )
           && (this.state.location !== undefined)
-          
+
 
     })
 
@@ -46,19 +46,20 @@ class PostTruckContainer extends Component {
 
   const truck={name: this.state.name,
               img: this.state.img,
-              location: {lat: this.state.lat, lng: this.state.lng},
+              lat: Number(this.state.lat),
+              lng: Number(this.state.lng),
               hours: this.state.hours,
               open: this.state.open,
               description: this.state.description,
               social: this.state.social
             }
-console.log(truck)
+console.log(truck.location)
   $.ajax({
     url: "/api/trucks",
     method: "POST",
     data: truck
   }).done((response) =>
-    browserHistory.push('/Trucks'))
+    browserHistory.push('/'))
 
 }
 

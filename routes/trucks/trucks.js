@@ -12,6 +12,7 @@ exports.getAll = (req, res) => {
 exports.makeNew = (req, res) => {
  var newTruck = new Truck();
  newTruck.loadData(req.body);
+ console.log(newTruck)
  newTruck.save(function(err, na){
    if(err){
     console.log(err)

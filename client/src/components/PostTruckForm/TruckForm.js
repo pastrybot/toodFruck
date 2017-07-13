@@ -1,8 +1,8 @@
 import React from 'react';
-
+import {formContainer} from "./FormStyle.css"
 const PostTruckForm = (props) => {
   return (
-    <div className="">
+    <div className={formContainer} >
       <form className="" onSubmit={(event) => props.handleSubmit(event)}>
       <h1 className="">Enter Truck Name</h1>
         <div className="">
