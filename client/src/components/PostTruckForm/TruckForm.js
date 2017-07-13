@@ -35,11 +35,6 @@ const PostTruckForm = (props) => {
           <input type="text" placeholder="Description"
             onChange={(event) => props.onChange("description", event.target.value)}/>
         </div>
-        <div className="">
-          <label className="">Social Media:</label>
-          <input type="text" placeholder="Social Media URL"
-            onChange={(event) => props.onChange("social media", event.target.value)}/>
-        </div>
           <button type="button" onClick={(event) => props.handleSubmit(event)}>Post</button>
       </form>
       </div>
