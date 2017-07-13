@@ -23,12 +23,12 @@
 }
 
 .truckPin span{
-  font-weight: 700;
-  font-size: 1.3em;
+  font-weight: 400;
+  font-size: 1.2em;
   line-height: 0.9em;
   position: absolute;
   left: 21px;
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.4);
   padding: 3px;
   border-radius: 5px;
 }

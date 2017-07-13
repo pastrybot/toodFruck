@@ -1,0 +1,13 @@
+.formContainer{
+  display:flex;
+  justify-content: flex-end;
+  height: 50%;
+  width: 50%;
+  border: 1px solid black;
+}
+.formContent{
+  display: flex;
+  
+  padding-left: 20%;
+  padding-right: 20%;
+}

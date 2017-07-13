@@ -1,12 +1,12 @@
 import React from 'react';
 import GoogleMapReact from 'google-map-react';
-
+import {formContainer, formContent} from './styles.css';
 import {Link} from 'react-router';
 
 const SignUpForm = (props) => {
   return (
-      <div className="container">
-        <form>
+      <div className={formContainer}>
+        <form className={formContent}>
         <div>
           <label>E-mail</label>
           <input

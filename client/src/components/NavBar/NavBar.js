@@ -1,5 +1,5 @@
 import React from 'react';
-import {clearfix, header, nav} from './NavStyle.css'
+import {clearfix, header, nav, auth} from './NavStyle.css'
 
 const NavBar = (props) => {
 	console.log(props.user);
@@ -13,7 +13,7 @@ const NavBar = (props) => {
 							<li><a href="/trucks">Local Trucks</a></li>
 
 						</ul>
-						<ul>
+						<ul className={auth}>
 							<li><a href="/signup">Sign Up</a></li>
 							<li><a href="/login">Login</a></li>
 						</ul>
