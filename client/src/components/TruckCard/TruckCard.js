@@ -15,13 +15,13 @@ import {Link} from 'react-router';
             <div className={hours}>🕒 { props.truck.hours }</div>
             <div className={description}>{ props.truck.description }</div>
             <div className={social}>
-            <a target="_blank" href={"http://www.facebook.com/"+ props.truck.social.facebook}>
+            <a target="_blank" href={"http://www."+ props.truck.facebook}>
               <figure className={facebook}></figure>
             </a>
-            <a target="_blank" href={"http://www.instagram.com/"+ props.truck.social.instagram}>
+            <a target="_blank" href={"http://www.instagram.com/"+ props.truck.instagram}>
               <figure className={instagram}></figure>
             </a>
-            <a target="_blank" href={"https://twitter.com/"+ props.truck.social.twitter}>
+            <a target="_blank" href={"https://twitter.com/"+ props.truck.twitter}>
               <figure className={twitter}></figure>
             </a>
             </div>

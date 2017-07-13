@@ -9,11 +9,10 @@ var TruckSchema = new mongoose.Schema({
     open: Boolean,
     description: String,
     img: String,
-    social: {
-          website: {type: String},
-          facebook: {type: String },
-          twitter: {type: String },
-          instagram: {type: String }
+    website: String,
+    facebook: String,
+    twitter: String,
+    instagram: String
   }
 
 
@@ -32,7 +31,9 @@ TruckSchema.methods.loadData = function(data){
   this.hours       = data.hours ? data.hours : this.hours;
   this.open        = data.open ? data.open : this.open;
   this.description = data.description ? data.description : this.description;
-  this.social      = data.social ? data.social : this.social;
+  this.facebook    = data.facebook ? data.facebook : this.facebook;
+  this.twitter     = data.twitter ? data.twitter : this.twitter;
+  this.instagram   = data.instagram ? data.instagram : this.instagram;
   this.img         = data.img ? data.img : this.img;
 
 }
