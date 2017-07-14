@@ -54,13 +54,16 @@
   color: white;
 }
 
-.auth{
+.nav ol{
     position: absolute;
-    text-overflow: clip;
-    bottom: 30px;
+    padding-left: 0;
+    bottom: 0;
     left: 0;
     font-size: 0.9em;
     font-weight: 500;
-    width: 200px;
+    width: 20%;
 
   }
+.nav ol li a:hover{
+  color: orange;
+}

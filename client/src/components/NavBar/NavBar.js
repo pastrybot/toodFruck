@@ -13,10 +13,10 @@ const NavBar = (props) => {
 							<li><a href="/trucks">Local Trucks</a></li>
 
 						</ul>
-						<ul className={auth}>
+						<ol className={auth}>
 							<li><a href="/signup">Sign Up</a></li>
 							<li><a href="/login">Login</a></li>
-						</ul>
+						</ol>
 					</nav>
 				</header>
 			</div>
