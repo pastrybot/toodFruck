@@ -45,7 +45,7 @@
 
 .nav a{
   color: white;
-  font-size: 1.7em;
+  font-size: 4.2vh;
   padding-left: 20px;
 }
 
@@ -59,11 +59,14 @@
     padding-left: 0;
     bottom: 0;
     left: 0;
-    font-size: 0.9em;
+    font-size: 4vh !important;
     font-weight: 500;
     width: 20%;
 
   }
-.nav ol li a:hover{
+.auth li:hover{
+  background-color: #247BA0 !important;
+}
+.auth li a:hover{
   color: orange;
 }
