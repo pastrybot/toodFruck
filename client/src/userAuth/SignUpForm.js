@@ -8,6 +8,7 @@ const SignUpForm = (props) => {
   return (
       <div className={formContainer}>
       <h3> Sign Up </h3>
+      <p>Register your food truck and get it on the map!</p>
         <form>
         <div>
           <label>E-mail</label>

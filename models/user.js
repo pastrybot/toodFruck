@@ -5,7 +5,9 @@ const UserSchema = new mongoose.Schema({
   local: {
     email: String, //login email
     password: String, //unique encrypted password
-    role: String
+    role: String,
+    truck: {type: mongoose.Schema.Types.ObjectId, ref: 'Truck'}
+
   }
 });
 

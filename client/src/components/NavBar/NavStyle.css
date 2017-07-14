@@ -56,8 +56,11 @@
 
 .auth{
     position: absolute;
-    bottom: 0;
+    text-overflow: clip;
+    bottom: 30px;
     left: 0;
     font-size: 0.9em;
     font-weight: 500;
+    width: 200px;
+
   }

@@ -6,7 +6,7 @@ const Login = (props) => {
   return (
       <div className={formContainer}>
         <h3>Login</h3>
-        <p> Register your food truck and get it on the map!</p>
+        <p>Update your trucks info here!</p>
         <form>
         <div>
           <label>E-mail</label>
@@ -26,7 +26,7 @@ const Login = (props) => {
           <button className={buttonOne} type="button" onClick={(event) =>
           props.handleSubmit(event)}>Login!</button>
           <button className={buttonTwo} type="button">
-            <Link className={link} to={'/signup'}>Sign Up</Link>
+            <Link className={link} to={'/signup/'}>Sign Up</Link>
           </button>
         </div>
         </form>

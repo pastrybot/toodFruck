@@ -12,8 +12,9 @@ var TruckSchema = new mongoose.Schema({
     website: String,
     facebook: String,
     twitter: String,
-    instagram: String
-  
+    instagram: String,
+    truckOwner: { type: mongoose.Schema.Types.ObjectId, ref: "User"}
+
 
 
 
@@ -35,6 +36,7 @@ TruckSchema.methods.loadData = function(data){
   this.twitter     = data.twitter ? data.twitter : this.twitter;
   this.instagram   = data.instagram ? data.instagram : this.instagram;
   this.img         = data.img ? data.img : this.img;
+  
 
 }
 TruckSchema.methods.loadLocation= function(powerN){

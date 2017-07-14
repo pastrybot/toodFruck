@@ -15,7 +15,7 @@ import {Link} from 'react-router';
             <div className={hours}>🕒 { props.truck.hours }</div>
             <div className={description}>{ props.truck.description }</div>
             <div className={social}>
-            <a target="_blank" href={"http://www."+ props.truck.facebook}>
+            <a target="_blank" href={"http://www.facebook.com/"+ props.truck.facebook}>
               <figure className={facebook}></figure>
             </a>
             <a target="_blank" href={"http://www.instagram.com/"+ props.truck.instagram}>

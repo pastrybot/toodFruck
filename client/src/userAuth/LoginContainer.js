@@ -27,7 +27,7 @@ class LoginContainer extends Component{
       method: 'POST',
       data: local
     }).done((response) => (response.user) ?
-    browserHistory.push(`/`) :
+    browserHistory.push(`/login/EditTruckForm`) :
     browserHistory.push(`/login`));
   }
   render(){
