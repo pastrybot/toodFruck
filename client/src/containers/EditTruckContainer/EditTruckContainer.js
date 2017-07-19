@@ -18,7 +18,7 @@ class EditTruckContainer extends Component{
     hours: undefined,
     open: undefined
   }
-  componentDidMount = () => this.loadTrucks();
+  
   handleSubmit = this.handleSubmit.bind(this);
   updateField = this.updateField.bind(this);
 

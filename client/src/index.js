@@ -29,7 +29,7 @@ ReactDOM.render(
       <Route path="/login" component={LoginContainer}/>
       <Route path="/signup" component={SignUpContainer}/>
       <Route path="/signup/newTruck" component={PostTruckContainer}/>
-      <Route path="/login/EditTruckForm/:_id" component={EditTruckContainer}/>
+      <Route path="/login/EditTruckForm" component={EditTruckContainer}/>
       <IndexRoute component={HomeContainer} />
     </Route>
   </Router>,

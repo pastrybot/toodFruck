@@ -55,13 +55,12 @@
 }
 
 .nav ol{
-    position: absolute;
-    padding-left: 0;
-    bottom: 0;
-    left: 0;
-    font-size: 4vh !important;
-    font-weight: 500;
-    width: 20%;
+  position: absolute;
+  padding-left: 0;
+  bottom: 0;
+  left: 0;
+  font-weight: 500;
+  width: 20%;
 
   }
 .auth li:hover{
