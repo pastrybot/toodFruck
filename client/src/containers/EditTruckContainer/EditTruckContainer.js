@@ -18,7 +18,7 @@ class EditTruckContainer extends Component{
     hours: undefined,
     open: undefined
   }
-  componentDidMount = () => this.loadTrucks();
+componentDidMount = () => this.loadTrucks();
   handleSubmit = this.handleSubmit.bind(this);
   updateField = this.updateField.bind(this);
 
@@ -30,10 +30,11 @@ class EditTruckContainer extends Component{
 
   loadTrucks(){
     $.ajax({
-      url:`/api/trucks/${this.props.params._id}`,
+      url:`/api/trucks/${this.props.user.truck_id}`,
       method: 'GET'
     }).done(data => {
-      this.setState({ name: data.name,
+      this.setState({ isFetching: false,
+                      name: data.name,
                       img: data.img,
                       lat: data.lat,
                       lng: data.lng,
@@ -46,6 +47,7 @@ class EditTruckContainer extends Component{
                       open: data.open
               })
     })
+    console.log(this.props.user)
   }
 
   handleSubmit(event){
@@ -64,7 +66,7 @@ class EditTruckContainer extends Component{
       open: this.state.open
     }
     $.ajax({
-      url:`/api/trucks/${this.props.params._id}`,
+      url:`/api/trucks/${this.props.user.truck_id}`,
       method: 'PUT',
       data: data
     }).done((response) => browserHistory.push('/')
@@ -75,7 +77,7 @@ class EditTruckContainer extends Component{
   render(){
     return(
       <div>
-        <h3>{ this.props.params._id }</h3>
+
         { !this.state.isFetching ?
         <EditTruckForm
             name= {this.state.name}

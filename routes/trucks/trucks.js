@@ -1,5 +1,6 @@
 var async = require('async');
 var Truck =  require('../../models/truckModel');
+var User = require('../../models/user');
 
 
 exports.getAll = (req, res) => {
@@ -12,13 +13,26 @@ exports.getAll = (req, res) => {
 exports.makeNew = (req, res) => {
  var newTruck = new Truck();
  newTruck.loadData(req.body);
- newTruck.truckOwner=req.user._id;
+ //newTruck.truckOwner=req.user._id;
  console.log(newTruck)
- newTruck.save(function(err, na){
+ newTruck.save(function(err, savedTruck){
    if(err){
     console.log(err)
    }else{
-     res.json(na)
+     User.findById(req.body.truckOwner, function (err, user){
+       if (!user) return res.status(404);
+       user.local.truck = req.body.truckOwner;
+       user.save(function(e){
+         if(e){
+           console.log(e);
+           res.status(500).send(e)
+         }else{
+           res.json({message: 'truck user created', user});
+         }
+       })
+
+
+     })
     }
   })
 }

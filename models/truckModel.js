@@ -36,7 +36,7 @@ TruckSchema.methods.loadData = function(data){
   this.twitter     = data.twitter ? data.twitter : this.twitter;
   this.instagram   = data.instagram ? data.instagram : this.instagram;
   this.img         = data.img ? data.img : this.img;
-  
+  this.truckOwner  = data.truckOwner ? data.truckOwner : this.truckOwner;
 
 }
 TruckSchema.methods.loadLocation= function(powerN){

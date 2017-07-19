@@ -10,5 +10,6 @@ module.exports = (app) => {
   app.post('/api/trucks', TruckRoutes.makeNew);
   app.put('/api/trucks/:truck_id', TruckRoutes.edit);
   app.delete('/api/trucks/:truck_id', TruckRoutes.remove);
+  
 
 }
