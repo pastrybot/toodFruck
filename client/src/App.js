@@ -19,7 +19,8 @@ getUser(){
       this.setState({
       user: {
         email: response.user.local.email,
-        id: response.user._id
+        id: response.user._id,
+        truck_id: response.user.local.truck
       },
       isAuthed: response.isAuthed
     })
@@ -37,7 +38,7 @@ getUser(){
       <div>
         <NavBar />
         <div>
-          {React.cloneElement(this.props.children, {...this.state}) }
+          {this.state.user && this.state.user.id ? React.cloneElement(this.props.children, {...this.state}): <h3>bleh</h3> }
         </div>
 
 

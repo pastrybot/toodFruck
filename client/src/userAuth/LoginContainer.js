@@ -8,6 +8,7 @@ class LoginContainer extends Component{
     email: undefined,
     password: undefined
   }
+  
   updateField = this.updateField.bind(this);
   updateField(field, value){
     const newState = {};
@@ -27,7 +28,7 @@ class LoginContainer extends Component{
       method: 'POST',
       data: local
     }).done((response) => (response.user) ?
-    browserHistory.push(`/login/EditTruckForm`) :
+    window.location = `/login/EditTruckForm` :
     browserHistory.push(`/login`));
   }
   render(){
