@@ -70,3 +70,6 @@
 .auth li a:hover{
   color: orange;
 }
+.auth li a{
+  font-size: 3.8vh;
+}
