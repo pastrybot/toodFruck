@@ -13,7 +13,8 @@ class PostTruckContainer extends Component {
     open: false,
     description: undefined,
     img: undefined,
-    social: undefined
+    social: undefined,
+
   }
   updateField(name, value){
     const newState = {};
@@ -51,16 +52,17 @@ class PostTruckContainer extends Component {
               hours: this.state.hours,
               open: this.state.open,
               description: this.state.description,
-              social: this.state.social
+              social: this.state.social,
+              truckOwner: this.props.user.id
             }
-console.log(truck.location)
+console.log(truck)
   $.ajax({
-    url: "/api/trucks",
+    url: "/api/trucks/",
     method: "POST",
     data: truck
   }).done((response) =>
     browserHistory.push('/'))
-
+console.log(truck)
 }
 
   render() {

@@ -8,7 +8,7 @@ class LoginContainer extends Component{
     email: undefined,
     password: undefined
   }
-  
+
   updateField = this.updateField.bind(this);
   updateField(field, value){
     const newState = {};
@@ -34,10 +34,12 @@ class LoginContainer extends Component{
   render(){
     return(
       <div>
-      <LoginForm
-        updateField={this.updateField}
-        handleSubmit={this.handleSubmit}
-      />
+
+        <LoginForm
+          updateField={this.updateField}
+          handleSubmit={this.handleSubmit}
+          />
+
       </div>
     )
   }

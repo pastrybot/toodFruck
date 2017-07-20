@@ -17,11 +17,14 @@ exports.makeNew = (req, res) => {
  console.log(newTruck)
  newTruck.save(function(err, savedTruck){
    if(err){
-    console.log(err)
+     console.log(err);
+     res.status(500).send(err)
    }else{
      User.findById(req.body.truckOwner, function (err, user){
        if (!user) return res.status(404);
-       user.local.truck = req.body.truckOwner;
+       console.log('found user, about to add truck')
+       user.local.truck = savedTruck._id;
+       console.log(user.local.truck);
        user.save(function(e){
          if(e){
            console.log(e);

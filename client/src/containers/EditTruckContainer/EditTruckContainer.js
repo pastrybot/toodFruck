@@ -16,7 +16,8 @@ class EditTruckContainer extends Component{
     facebook: undefined,
     instagram: undefined,
     hours: undefined,
-    open: undefined
+    open: undefined,
+
   }
 componentDidMount = () => this.loadTrucks();
   handleSubmit = this.handleSubmit.bind(this);
@@ -32,7 +33,8 @@ componentDidMount = () => this.loadTrucks();
     $.ajax({
       url:`/api/trucks/${this.props.user.truck_id}`,
       method: 'GET'
-    }).done(data => {
+    }).done((data) => {
+      console.log(data)
       this.setState({ isFetching: false,
                       name: data.name,
                       img: data.img,
@@ -44,7 +46,8 @@ componentDidMount = () => this.loadTrucks();
                       facebook: data.facebook,
                       instagram: data.instagram,
                       hours: data.hours,
-                      open: data.open
+                      open: data.open,
+
               })
     })
     console.log(this.props.user)
@@ -77,23 +80,25 @@ componentDidMount = () => this.loadTrucks();
   render(){
     return(
       <div>
+      <EditTruckForm
+          name= {this.state.name}
+          img= {this.state.img}
+          lat= {this.state.lat}
+          lng= {this.state.lng}
+          website= {this.state.website}
+          description= {this.state.description}
+          twitter= {this.state.twitter}
+          facebook= {this.state.facebook}
+          instagram= {this.state.instagram}
+          hours= {this.state.hours}
+          open= {this.state.open}
+          updateField={this.updateField}
+          handleSubmit={this.handleSubmit}
 
-        { !this.state.isFetching ?
-        <EditTruckForm
-            name= {this.state.name}
-            img= {this.state.img}
-            lat= {this.state.lat}
-            lng= {this.state.lng}
-            website= {this.state.website}
-            description= {this.state.description}
-            twitter= {this.state.twitter}
-            facebook= {this.state.facebook}
-            instagram= {this.state.instagram}
-            hours= {this.state.hours}
-            open= {this.state.open}
+      />
 
-        /> : <h3>still thinking...</h3>
-      }
+
+
       </div>
 
 
