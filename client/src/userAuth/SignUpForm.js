@@ -27,6 +27,7 @@ const SignUpForm = (props) => {
         <div>
           <button className={buttonOne} type="button" onClick={(event) =>
           props.handleSubmit(event)}>Sign Up!</button>
+            <Link className={link} to={'/'}></Link>
           <button className={buttonTwo} type="button">
             <Link className={link} to={'/login'}>Login</Link>
           </button>

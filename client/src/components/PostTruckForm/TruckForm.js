@@ -1,5 +1,6 @@
 import React from 'react';
 import {postFormContainer, postButton, latLng} from "./FormStyle.css"
+import {Link} from 'react-router';
 const PostTruckForm = (props) => {
   return (
     <div className={postFormContainer} >
@@ -57,7 +58,10 @@ const PostTruckForm = (props) => {
           <input type="text" placeholder="@"
             onChange={(event) => props.onChange("twitter", event.target.value)}/>
         </div>
-          <button className={postButton} type="button" onClick={(event) => props.handleSubmit(event)}>Go!</button>
+          <button className={postButton} type="button" onClick={(event) => props.handleSubmit(event)}>
+          <Link to={'/'}>Go!</Link>
+          </button>
+
       </form>
       </div>
   )

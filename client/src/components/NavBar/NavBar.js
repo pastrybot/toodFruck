@@ -2,7 +2,7 @@ import React from 'react';
 import {clearfix, header, nav, auth} from './NavStyle.css'
 
 const NavBar = (props) => {
-	console.log(props.user);
+	
 		return (
 			<div className={clearfix}>
 				<header className={header}>

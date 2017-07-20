@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import {NavBar} from './components';
+import {HomeContainer} from './containers';
 import $ from 'jquery';
+
 
 class App extends Component {
 
@@ -38,7 +40,7 @@ getUser(){
       <div>
         <NavBar />
         <div>
-          {this.state.user && this.state.user.id ? React.cloneElement(this.props.children, {...this.state}): <h3>bleh</h3> }
+          {this.state.user && this.state.user.id ? React.cloneElement(this.props.children, {...this.state}): <HomeContainer /> }
         </div>
 
 
