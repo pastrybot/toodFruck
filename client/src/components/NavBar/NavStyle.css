@@ -1,8 +1,4 @@
-html{
-  min-height: 100%;
-  position: relative;
-}
-
+@import url('https://fonts.googleapis.com/css?family=Exo|Exo+2');
 
 .clearfix { display: inline-block; }
 /* start commented backslash hack \*/

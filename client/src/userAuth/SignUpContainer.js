@@ -25,7 +25,7 @@ class SignUpContainer extends Component{
       method: 'POST',
       data: local
     }).done((response) => (response._id) ?
-     browserHistory.push('/signup/newTruck') :
+     window.location = '/signup/newTruck' :
      browserHistory.push(`/error/${response.message}`))
 
     }

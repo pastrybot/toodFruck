@@ -19,7 +19,19 @@ class EditTruckContainer extends Component{
     open: undefined,
 
   }
-componentDidMount = () => this.loadTrucks();
+componentDidMount = () => {
+  var self = this;
+  setTimeout(function () {
+    if (self.props.user){
+    self.loadTrucks();
+    } else {
+      window.location = "/login"
+    }
+  }, 2000);
+
+
+}
+
   handleSubmit = this.handleSubmit.bind(this);
   updateField = this.updateField.bind(this);
 

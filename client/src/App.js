@@ -40,7 +40,7 @@ getUser(){
       <div>
         <NavBar />
         <div>
-          {this.state.user && this.state.user.id ? React.cloneElement(this.props.children, {...this.state}): <HomeContainer /> }
+          { React.cloneElement(this.props.children, {...this.state}) }
         </div>
 
 

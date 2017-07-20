@@ -59,7 +59,7 @@ const PostTruckForm = (props) => {
             onChange={(event) => props.onChange("twitter", event.target.value)}/>
         </div>
           <button className={postButton} type="button" onClick={(event) => props.handleSubmit(event)}>
-          <Link to={'/'}>Go!</Link>
+            Go!
           </button>
 
       </form>
