@@ -16,7 +16,8 @@ input:focus{
 
 .formContainer h3{
   font-weight: 700;
-  color: #247BA0;
+  color: #FF6347;
+  font-family: 'Exo', sans-serif;
 }
 
 .formContainer p{
@@ -29,7 +30,7 @@ input:focus{
 }
 
 .formContainer label{
-  color: #247BA0;
+  color: #463F3A;
   display: block;
   margin-bottom: 0px;
   padding-top: 10px;
@@ -38,7 +39,7 @@ input:focus{
 .formContainer input{
   border: 0;
   outline: 0;
-  border-bottom: 1px solid #247BA0;
+  border-bottom: 1px solid #463F3A;
   width: 250px;
   font-family: 'Exo', sans-serif;
 }
@@ -54,7 +55,7 @@ input:focus{
 
 .buttonOne{
   border-radius: 10px 0px 0px 10px;
-  background-color: #247BA0;
+  background-color: #FF6347;
   transition: background-color 0.2s ease;
 }
 
@@ -65,7 +66,7 @@ input:focus{
 }
 
 .formContainer button:hover{
-  background-color: #70C1B3;
+  background-color: #17BEBB;
 }
 
 .link{

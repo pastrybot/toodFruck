@@ -16,7 +16,7 @@ input:focus{
 
 .postFormContainer h3{
   font-weight: 700;
-  color: #247BA0;
+  color: #FF6347;
 }
 
 .postFormContainer div{
@@ -24,7 +24,7 @@ input:focus{
 }
 
 .postFormContainer label{
-  color: #494A4C;
+  color: #463F3A;
   display: block;
   margin-bottom: 0px;
   padding-top: 10px;
@@ -33,7 +33,7 @@ input:focus{
 .postFormContainer input{
   border: 0;
   outline: 0;
-  border-bottom: 1px solid #247BA0;
+  border-bottom: 1px solid #463F3A;
   width: 250px;
 }
 
@@ -52,7 +52,7 @@ input:focus{
 }
 
 .postFormContainer button:hover{
-  background-color: #70C1B3;
+  background-color: #17BEBB;
 }
 
 

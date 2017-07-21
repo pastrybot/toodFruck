@@ -9,11 +9,11 @@
   text-overflow: clip;
   font-family: 'Exo', sans-serif;
   font-weight: bold;
-  background-color: #247BA0;
+  background-color: #FF6347;
   height: 100vh;
   width: 20%;
   float: left;
-
+  width: 20%;
 }
 
 .nav ul{
@@ -32,7 +32,7 @@
 }
 
 .nav li:hover{
-  background-color: #70C1B3;
+  background-color: #FF8E72;
 }
 
 .nav a{
@@ -56,10 +56,10 @@
 
   }
 .auth li:hover{
-  background-color: #247BA0 !important;
+  background-color: #FF8E72 !important;
 }
 .auth li a:hover{
-  color: orange;
+  color: white;
 }
 .auth li a{
   font-size: 3.8vh;

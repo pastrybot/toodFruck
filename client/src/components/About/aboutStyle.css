@@ -1,0 +1,105 @@
+.about{
+  float: left;
+  padding: 50px;
+  width: 80%;
+}
+
+.about h1{
+  font-family: 'Exo', sans-serif;
+  font-weight: 700;
+  color: #FF6347;
+}
+
+.about h4{
+    color: #FF6347;
+}
+
+.peeps{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 70px 0px;
+}
+
+.solo{
+  width: 30%;
+  margin: 0 auto;
+  margin: 0 15px;
+}
+
+.about figure{
+  display: flex;
+  justify-content: center;
+}
+
+.about img{
+  border-radius: 100px;
+  width: 150px;
+  height: 150px;
+}
+
+.solo h4{
+  text-align: center;
+  padding-top: 12px;
+  color: black;
+}
+
+.about figcaption{
+  text-align: center;
+}
+
+.whatItIs{
+  margin-bottom: 50px;
+}
+
+.contact{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+::-webkit-input-placeholder{
+  color: #BABCC1;
+  font-size: 10pt;
+  font-family: 'Exo', sans-serif;
+}
+
+input:focus{
+  font-size: 10pt;
+  color: #494A4C;
+}
+
+.contact label{
+  color: #494A4C;
+  display: block;
+  margin-bottom: 0px;
+  padding-top: 10px;
+}
+
+.contact input{
+  border: 0;
+  outline: 0;
+  border-bottom: 1px solid #463F3A;
+  width: 250px;
+}
+
+.contact textarea{
+  outline: 0;
+  border: 1px solid #463F3A;
+  width: 450px;
+}
+
+.contact button{
+  margin-top: 25px;
+  border: none;
+  padding: 7px 0px;
+  font-weight: 700;
+  font-family: 'Exo', sans-serif;
+  color: white;
+  width: 70px;
+  background-color: #FF6347;
+  transition: background-color 0.2s ease;
+}
+
+.contact button:hover{
+  background-color: #17BEBB;
+}
