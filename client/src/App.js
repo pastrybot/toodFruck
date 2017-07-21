@@ -33,8 +33,6 @@ getUser(){
   })
 }
 
-
-
   render() {
     return (
       <div>

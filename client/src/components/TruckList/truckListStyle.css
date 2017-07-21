@@ -1,0 +1,87 @@
+.hero-flex {
+  display: inline-flex;
+  justify-content: space-around;
+  width: auto;
+  flex-wrap: wrap;
+}
+
+.truckCard{
+  width: 150px;
+  overflow: hidden;
+  background-color: white;
+  font-family: 'PT Sans', sans-serif;
+  border-radius: 3px;
+  padding-bottom: 4px;
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.25);
+}
+
+.photobooth{
+  height: 100px;
+  position: relative;
+}
+
+.truckCard img {
+    position: absolute;
+    height: 100px;
+    width: 100%;
+}
+
+.gradient{
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.69) , transparent);
+  box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.25);
+  height: 100px;
+  width: 100%;
+  position: absolute;
+  z-index: 50;
+}
+
+.truckCard h2{
+  font-size: 15pt;
+  font-weight: 700;
+  bottom: 0px;
+  padding-left: 5px;
+  color: white;
+  z-index: 100;
+  position: absolute;
+}
+
+.info{
+  display: inline-block;
+  padding: 5px;
+}
+
+.info *{
+  padding-bottom: 3px;
+}
+
+.hours{
+  font-weight: 700;
+}
+.social{
+  display: flex;
+  justify-content: space-around;
+  width: 140px;
+
+}
+.facebook{
+  display: flex;
+  background-image: url("https://en.facebookbrand.com/wp-content/uploads/2016/05/FB-fLogo-Blue-broadcast-2.png");
+  background-size: contain;
+  height: 17px;
+  width: 17px;
+}
+.instagram{
+  display: flex;
+  background-image: url("https://seeklogo.com/images/I/instagram-new-2016-logo-D9D42A0AD4-seeklogo.com.png");
+  background-size: contain;
+  height: 19px;
+  width: 19px;
+
+}
+.twitter{
+  display: flex;
+  background-image: url("https://cdn.worldvectorlogo.com/logos/twitter.svg");
+  background-size: cover;
+  height: 18px;
+  width: 21px;
+}
