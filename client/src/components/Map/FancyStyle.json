@@ -28,7 +28,7 @@
         "color": "#dfe0dd"
       },
       {
-        "weight": 3.5
+        "weight": 5
       }
     ]
   },
@@ -72,7 +72,19 @@
     "elementType": "geometry.fill",
     "stylers": [
       {
-        "lightness": "-4"
+        "color": "#fcfcfc"
+      },
+      {
+        "lightness": -5
+      }
+    ]
+  },
+  {
+    "featureType": "landscape.natural",
+    "elementType": "labels.text.stroke",
+    "stylers": [
+      {
+        "visibility": "off"
       }
     ]
   },
@@ -81,13 +93,16 @@
     "elementType": "geometry.fill",
     "stylers": [
       {
-        "saturation": "18"
+        "color": "#f2f5f7"
       },
       {
-        "lightness": "-35"
+        "saturation": 20
       },
       {
-        "gamma": "1.28"
+        "lightness": -35
+      },
+      {
+        "gamma": 1.33
       }
     ]
   },
@@ -96,7 +111,10 @@
     "elementType": "geometry.fill",
     "stylers": [
       {
-        "lightness": "-32"
+        "lightness": -30
+      },
+      {
+        "visibility": "off"
       }
     ]
   },
@@ -142,7 +160,7 @@
         "color": "#263238"
       },
       {
-        "lightness": 18
+        "lightness": 20
       }
     ]
   },
@@ -172,10 +190,10 @@
     "elementType": "geometry.fill",
     "stylers": [
       {
-        "color": "#263238"
+        "color": "#3f545f"
       },
       {
-        "lightness": 17
+        "lightness": 15
       }
     ]
   },
@@ -221,6 +239,15 @@
       },
       {
         "lightness": 16
+      }
+    ]
+  },
+  {
+    "featureType": "road.local",
+    "elementType": "geometry.fill",
+    "stylers": [
+      {
+        "color": "#597686"
       }
     ]
   },
